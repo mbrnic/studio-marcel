@@ -168,6 +168,26 @@
                 enabled: true
             }
         });
+        $('.image-popup-gallery-media-about-me').magnificPopup({
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true,
+                titleSrc: function(item) {
+                    return item.el.attr('title');
+                    //return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+                }
+            },
+            zoom: {
+                enabled: true,
+                duration: 500 // don't foget to change the duration also in CSS
+            },
+            gallery: {
+                enabled: true
+            }
+        });
         $('.images-group').each(function() { // the containers for all your galleries
             $(this).magnificPopup({
                 delegate: 'a', // the selector for gallery item
