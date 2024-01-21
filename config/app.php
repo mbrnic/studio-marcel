@@ -183,6 +183,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        
+        // added in order to use Str within Blade
+        'Str' => \Illuminate\Support\Str::class,
     ])->toArray(),
 
 ];
